@@ -1,0 +1,1214 @@
+/*  
+Theme Name: Lumos Theme
+Theme URI: https://manaf.co.in
+Description: A WordPress theme frame work
+Version: 1.0
+Author: Manaf
+*/
+
+
+*{
+    box-sizing: border-box;
+}
+
+#search{
+    float:right;
+    width:270px;
+    padding-top: 10px;
+}
+#search fieldset{
+    border:none;
+}
+#search #s{
+    padding:3px;
+    width:140px;
+    vertical-align:top;
+}
+#search #x{
+    width:60px;
+    vertical-align:top;
+}
+#logo {
+    background-color: #b5b5b5;
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+    float: left;
+    padding: 10px 0;
+    border-bottom: 1px solid #cecece;
+}
+#page {
+    background-color: #fff;
+    min-height: 500px;
+    float: left;
+    width: 100%;
+    overflow-x: hidden;
+}
+.container {
+    width: 1635px;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+
+acronym, abbr, span.caps{
+    cursor:help;
+}
+acronym, abbr{
+    border-bottom:1px dashed #999;
+}
+blockquote{
+    padding-left:52px;
+    background-image: url(images/qt.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    margin-top: 15px;
+    margin-right: 30px;
+    margin-bottom: 0;
+    margin-left: 10px;
+    padding-top: 5px;
+}
+blockquote cite{
+    display:block;
+    margin:5px 0 0;
+}
+.center{
+    text-align:center;
+}
+.aligncenter{
+    margin-right: auto;
+    margin-left: auto;
+}
+img.aligncenter{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/*Drop Menu start*/
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    align-items: center;
+    padding: 15px 0;
+    z-index: 999;
+    background-color: rgba(0,0,0,.4);
+    transition: all ease .3s;
+}
+#header a.lumos-logo {
+    float: left;
+}
+#header a.lumos-logo img {
+    height: 67px;
+}
+
+.menu-top-navigation a {
+    display: block;
+    float: left;
+    text-decoration: none;
+    padding: 0;
+    transition: all 0.3s ease;
+    position: relative;
+    font-size: 20px;
+    color: #A1A1A1;
+    line-height: 22px;
+    font-family: 'Quicksand', sans-serif;
+    margin-right: 70px;
+}
+.menu-top-navigation a::after {
+    content: "";
+    position: absolute;
+    right: -35px;
+    height: 15px;
+    top: 4px;
+    width: 1px;
+    background-color: #a1a1a1;
+}
+.menu-top-navigation li:last-of-type a::after {
+    display: none;
+}
+.menu-top-navigation a:hover {
+    color: #fff;
+}
+.menu-top-navigation .nav-button {
+    float: right;
+}
+.menu-top-navigation .nav-button > a {
+    border-radius: 25px;
+    background-color: #3b36ad;
+    font-size: 18px;
+    text-align: center;
+    color: #f8f6fe;
+    text-decoration: none;
+    padding: 10px 20px;
+    position: absolute;
+    right: 0;
+    top: 6px;
+    white-space: nowrap;
+}
+.menu-top-navigation .nav-button > a:hover {
+    background-color: rgba(0,0,0,.3);
+}
+.menu-top-navigation li {
+     float:left;
+     position:relative;
+}
+.menu-top-navigation ul a {
+    font-weight: normal;
+}
+.menu-top-navigation .current_page_item > a {
+    color: #2699FB;
+}
+ .menu-top-navigation ul a:hover {
+     color: #FFFFFF;
+     font-weight: normal;
+}
+.menu-top-navigation li ul li {
+    width: 16.6%;
+    margin-bottom: 80px;
+}
+.menu-top-navigation li ul a {
+    height: auto;
+    float: left;
+    margin: 0px;
+    min-width: 112px;
+    display: block;
+    padding: 0px 15px 0 2px;
+}
+ .menu-top-navigation li ul a:hover{
+     color: #fff;
+}
+ .clear, .cb{
+     clear:both;
+}
+ .menu-top-navigation li ul a:hover {
+     color: #FFFFFF;
+}
+ .menu-top-navigation ul ul {
+    top:auto;
+}
+.menu-top-navigation li ul ul {
+    left: 100%;
+}
+.menu-top-navigation li:hover ul ul, .menu-top-navigation li:hover ul ul ul, .menu-top-navigation li:hover ul ul ul ul {
+    display:none;
+}
+#desk-menu li:hover ul/* , 
+.menu-top-navigation li li:hover ul, 
+.menu-top-navigation li li li:hover ul, 
+.menu-top-navigation li li li li:hover ul */ {
+    display:block;
+}
+.menu-top-navigation li ul li.menu-item-has-children a{
+    background-image: url(images/drop_list_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+ .menu-top-navigation li ul li.menu-item-has-children a:hover{
+     background-image:url(images/drop_list_bg_hover.jpg);
+}
+
+
+/* mobile menu start*/
+.menu-tab-outer {
+    height: 100%;
+    float: right;
+}
+.menu-tab {
+    width: 44px;
+    height: 28px;
+    z-index: 100;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    float: right;
+    display: block;
+    text-align: right;
+    margin-top: 22px;
+}
+
+.menu-tab div {
+    height: 3px;
+    background-color: #fff;
+    display: block;
+    transition: all 0.3s ease-in-out;
+    float: right;
+    clear: both;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.menu-tab .one {
+    width: 100%;
+}
+.menu-tab .two,
+.menu-tab .three {
+    width: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-tab:hover .two {
+    width: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-tab.active {
+    left: 345px;
+    transition: all 600ms ease-in-out;
+}
+
+.menu-hide {
+    width: 345px;
+    right: -345px;
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+    top: 154px;
+    transition: all 0.6s ease-in-out;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.menu-hide.show {
+    right: 0px;
+    transition: all 0.6s ease-in-out;
+    z-index: 9999999;
+}
+
+.menu-tab-outer {
+    display: block;
+}
+.menu-top-navigation {
+    width: 1436px;
+    max-width: 90%;
+    right: -1436px;
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+    margin-top: 0;
+    margin-right: 0;
+    background-color: rgba(0,0,0,1);
+    padding: 3% 3% 2% 5%;
+}
+.menu-top-navigation.show {
+    right: 0px;
+    transition: all 0.2s ease-in-out;
+    z-index: 9999999;
+}
+.menu-top-navigation li ul {
+    position: static;
+    float: left;
+    width: 100%;
+    background: none;
+    padding-top: 0;
+}
+.menu-top-navigation li.product-title {
+    width: 100%;
+}
+.menu-top-navigation-close {
+    text-align: right;
+    padding-bottom: 40px;
+}
+.menu-top-navigation-close svg{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.menu-top-navigation-close svg:hover * {
+    fill: #3fb2e3;
+}
+.menu-top-navigation li.product-title > a {
+    font-size: 35px;
+    color: #fff;
+    font-weight: 600;
+    padding: 0;
+    margin-bottom: 50px;
+}
+.menu-top-navigation li.product-title > a::after,
+.menu-top-navigation li ul a::after,
+.menu-top-navigation .menu-top-navigation-footer a::after{
+    display: none;
+}
+.menu-top-navigation .menu-top-navigation-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    padding: 20px 3% 30px 7%;
+    background-color: rgba(0,0,0,.7);
+}
+.menu-top-navigation .menu-top-navigation-footer a svg {
+    float: left;
+    margin-right: 14px;
+}
+.menu-top-navigation .menu-top-navigation-footer a {
+    margin-right: 30px;
+    margin-top: 24px;
+    float: none;
+    display: inline-block;
+}
+.menu-top-navigation .menu-top-navigation-footer a.menu-logo {
+    float: right;
+    margin-right: 0;
+    margin-top: 0;
+}
+/* mobile menu end*/
+
+
+section.hero {
+    position: relative;
+    overflow: hidden;
+    padding-top: 320px;
+    padding-bottom: 90px;
+    width: 100%;
+    text-align: center;
+}
+section.hero .hero-bg {
+    width: 1920px;
+    max-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transform-origin: top left;
+}
+.hero-overlay h1.title {
+    font-size: 80px;
+    color: #fff;
+    line-height: 90px;
+    margin-bottom: 20px;
+}
+.hero-overlay p {
+    font-size: 25px;
+    color: #fff;
+    line-height: 32px;
+    margin-bottom: 30px;
+}
+.hero-overlay a {
+    font-size: 17px;
+    color: #000;
+    font-weight: bold;
+    padding: 10px 50px;
+    background-color: #fff;
+    line-height: 28px;
+    margin-top: 12px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+.hero-overlay a:hover {
+    background-color: #2699FB;
+    color: #fff;
+}
+.hero-overlay {
+    position: relative;
+}
+
+
+
+
+section.footer {
+    float: left;
+    width: 100%;
+    background-color: #0F0F0F;
+    padding: 60px 0 25px;
+}
+#footer-left-navigation {
+    float: left;
+    list-style: none;
+    width: 20%;
+    margin: 0px;
+}
+#footer-left-navigation li {
+    display: block;
+}
+#footer-left-navigation li a {
+    font-size: 18px;
+    line-height: 22px;
+    color: #768088;
+    font-family: 'Quicksand', sans-serif;
+    transition: all 0.3s ease;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+#footer-left-navigation li a:hover {
+    color: #fff;
+}
+.footer-right {
+    float: right;
+    max-width: 20%;
+}
+.footer-right p {
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    display: inline-block;
+    margin-right: 30px;
+    margin-top: 7px;
+}
+.footer-center {
+    float: left;
+    width: 60%;
+    text-align: center;
+}
+a.lumos-logo-footer {
+    float: none;
+    display: inline-block;
+    margin-top: 40px;
+}
+a.header-button {
+    float: left;
+    font-size: 15px;
+    color: #000;
+    font-weight: bold;
+    padding: 7px 45px;
+    background-color: #fff;
+    line-height: 28px;
+    margin-top: 15px;
+    margin-right: 90px;
+    transition: all 0.3s ease;
+}
+a.header-button:hover {
+    background-color: #2699FB;
+    color: #fff;
+}
+.footer-right h3 {
+    color: #BCBDC2;
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.footer-right a {
+    display: block;
+    font-size: 18px;
+    line-height: 28px;
+    color: #768088;
+    margin-bottom: 15px;
+    background-repeat: no-repeat;
+    background-position: left 5px;
+    padding-left: 30px;
+    transition: all 0.3s ease;
+}
+.footer-right a:hover {
+    color: #fff;
+}
+section.footer-bottom {
+    float: left;
+    width: 100%;
+    background-color: #000;
+    padding: 20px 0;
+    position: relative;
+    z-index: 250;
+}
+section.footer-bottom p {
+    color: #565F67;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 0;
+    margin: 0;
+    float: left;
+    margin-right: 40px;
+}
+#footer-bottom-navigation {
+    margin: 0;
+    padding: 0;
+}
+#footer-bottom-navigation li {
+    float: left;
+    margin-right: 40px;
+    position: relative;
+}
+#footer-bottom-navigation li a{
+    color: #565F67;
+    font-size: 18px;
+    line-height: 22px;
+    transition: all 0.3s ease;
+}
+#footer-bottom-navigation li a:hover{
+    color: #fff;
+}
+#footer-bottom-navigation li::after {
+    position: absolute;
+    height: 15px;
+    width: 1px;
+    background-color: #565f67;
+    content: "";
+    top: 6px;
+    right: -20px;
+}
+#footer-bottom-navigation li:last-child::after {
+    display: none;
+}
+.footer-bottom-social {
+    float: right;
+}
+.footer-bottom-social a {
+    display: inline-block;
+    margin-left: 20px;
+}
+.footer-bottom-social a svg {
+    height: 20px;
+}
+
+
+
+
+
+
+section.lumos-blog {
+    padding: 90px 0;
+}
+section.lumos-blog .container {
+    width: 1270px;
+}
+h2.blog-listing-title {
+    float: left;
+    font-size: 35px;
+    color: #000;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+ul.blog-category-list {
+    float: right;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+}
+ul.blog-category-list li.active-blog-menu {
+    background-color: #eeefef;
+}
+ul.blog-category-list li.active-blog-menu a{
+    font-weight: 600;
+}
+ul.blog-category-list li {
+    padding: 10px 40px;
+    background-color: #f6f7f7;
+    float: left;
+}
+ul.blog-category-list a {
+    font-size: 23px;
+    color: #000000;
+    font-weight: 300;
+    display: inline-block;
+    line-height: 26px;
+    transition: all 0.3s ease;
+}
+ul.blog-category-list a:hover {
+    color: #318ace;
+}
+.blog-listing-body .blog-item:nth-child(3n) {
+    margin-right: 0;
+}
+.blog-listing-body .blog-item {
+    float: left;
+    width: 32%;
+    margin-right: 2%;
+    margin-bottom: 45px;
+}
+.blog-listing-body .blog-list-image {
+    width: 100%;
+    height: 240px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+.blog-listing-body .blog-list-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+.blog-listing-body .blog-list-image img:hover {
+    transform: scale(1.1);
+}
+.blog-listing-body .blog-lising-content h3 {
+    font-size: 25px;
+    color: #343434;
+    line-height: 28px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.blog-listing-body .blog-lising-content p{
+    font-size: 23px;
+    color: #343434;
+    line-height: 26px;
+    margin-bottom: 15px;
+}
+.blog-listing-body .blog-lising-content a.view-more {
+    font-size: 19px;
+    font-weight: 600;
+    color: #343434;
+    line-height: 28px;
+    background-image: url(images/view-all.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-right: 60px;
+    margin-top: 5px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+.blog-listing-body .blog-lising-content a.view-more:hover {
+    color: #318ace;
+}
+
+.blog-pagination {
+    text-align: center;
+    margin-top: 40px;
+}
+.blog-pagination .page-numbers.current {
+    background-color: #eeefef;
+    border: 1px solid #eeefef;
+}
+.blog-pagination .page-numbers:hover {
+    background-color: #eeefef;
+    border: 1px solid #eeefef;
+}
+.blog-pagination .page-numbers {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    border: 1px solid #f6f7f7;
+    transition: all 0.3s ease;
+}
+
+
+
+section.errorpage {
+    padding: 300px 0 500px;
+}
+
+
+
+section.blog-single {
+    float: left;
+    width: 100%;
+    margin-bottom: 50px;
+}
+section.blog-single .container {
+    width: 1270px;
+}
+#breadcrumbs {
+    font-size: 22px;
+    padding: 30px 0;
+    color: #D2D2D2;
+}
+#breadcrumbs span[aria-current="page"] {
+    color: #565F67;
+}
+#breadcrumbs a {
+    color: #D2D2D2;
+}
+#breadcrumbs a:hover {
+    color: #565F67;
+}
+.blog-single-left {
+    float: left;
+    width: 65%;
+    margin-top: 30px;
+}
+.blog-single-left img {
+    height: auto;
+}
+.blog-single-right {
+    float: right;
+    width: 30%;
+    margin-top: 28px;
+}
+.post-recent.blog-listing-body .blog-item {
+    width: 100%;
+    margin-right: 0;
+}
+
+.post .title {
+    font-weight: 600;
+    margin: 0;
+    font-size: 35px;
+    color: #565F67;
+    margin-bottom: 30px;
+}
+.post .title span {
+    display: block;
+    font-size: 19px;
+    font-weight: normal;
+    color: #343434;
+    margin-top: 10px;
+}
+.entry p,
+.entry ul,
+.entry ol,
+.entry a,
+.entry table,
+.entry table td,
+.entry table th{
+    font-size: 18px;
+    color: #565F67;
+    line-height: 25px;
+
+}
+.entry p{
+    margin-bottom: 15px;
+}
+.entry ul, .entry ol {
+    margin-bottom: 15px;
+    list-style: inside;
+}
+.entry h1,
+.entry h2,
+.entry h3,
+.entry h4,
+.entry h5,
+.entry h6{
+    color: #343434;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+@media (max-width:1736px) {
+
+}
+@media (max-width:1636px) {
+}
+
+@media (max-width:1536px) {
+  
+}
+@media (max-width:1480px) {
+    
+}
+@media (max-width:1366px) {
+    #header a.lumos-logo {
+        width: 200px;
+    }
+    a.header-button {
+        font-size: 15px;
+        padding: 6px 35px;
+        margin-top: 13px;
+        margin-right: 60px;
+    }
+    .menu-tab {
+        width: 40px;
+        height: 28px;
+        margin-top: 22px;
+    }
+    .menu-top-navigation li.product-title > a {
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+    .menu-top-navigation-close svg {
+        width: 40px;
+    }
+    .menu-top-navigation a {
+        font-size: 18px;
+    }
+    .menu-top-navigation .menu-top-navigation-footer {
+        padding: 20px 3% 30px 5%;
+    }
+    .hero-overlay h1.title {
+        font-size: 70px;
+        line-height: 80px;
+        margin-bottom: 15px;
+    }
+    .hero-overlay p {
+        font-size: 22px;
+        line-height: 28px;
+        margin-bottom: 20px;
+    }
+    ul.blog-category-list a {
+        font-size: 20px;
+    }
+    .blog-listing-body .blog-lising-content h3 {
+        font-size: 22px;
+    }
+    .blog-listing-body .blog-lising-content p {
+        font-size: 20px;
+    }
+    .blog-listing-body .blog-lising-content a.view-more {
+        font-size: 18px;
+    }
+    .blog-listing-body .blog-list-image {
+        height: 210px;
+    }
+    .menu-top-navigation {
+        overflow-y: auto;
+    }
+    .blog-single-right {
+        width: 28%;
+    }
+    .blog-single-left {
+        width: 68%;
+    }
+}
+
+@media (max-width:1199px) {
+    .menu-top-navigation li ul li {
+        margin-bottom: 60px;
+    }
+    .hero-overlay h1.title {
+        font-size: 60px;
+        line-height: 70px;
+        margin-bottom: 10px;
+    }
+    section.footer-bottom p, #footer-bottom-navigation li a{
+        font-size: 16px;
+    }
+    .menu-top-navigation .menu-top-navigation-footer a.menu-logo {
+        width: 190px;
+    }
+    .menu-top-navigation .menu-top-navigation-footer a {
+        margin-top: 16px;
+    }
+}
+
+@media (max-width:960px) {
+    h1{
+        font-size:28px;
+    }
+    h2{
+        font-size:26px;
+    }
+    h3{
+        font-size:24px;
+    }
+    h4{
+        font-size:22px;
+    }
+    h5{
+        font-size:20px;
+    }
+    h6{
+        font-size:16px;
+    }
+    
+    section.hero {
+        padding-top: 240px;
+        padding-bottom: 60px;
+    }
+    .hero-overlay h1.title {
+        font-size: 50px;
+        line-height: 60px;
+    }
+    .hero-overlay p {
+        font-size: 20px;
+        line-height: 26px;
+    }
+    section.lumos-blog {
+        padding: 60px 0;
+    }
+    h2.blog-listing-title {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    ul.blog-category-list a {
+        font-size: 18px;
+    }
+    ul.blog-category-list li {
+        padding: 8px 35px;
+    }
+    ul.blog-category-list {
+        margin-bottom: 25px;
+    }
+
+    .blog-listing-body .blog-item {
+        width: 49%;
+    }
+    .blog-listing-body .blog-item:nth-child(3n) {
+        margin-right: 2%;
+    }
+    .blog-listing-body .blog-item:nth-child(2n) {
+        margin-right: 0;
+    }
+    #footer-left-navigation li a {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }  
+    .footer-center {
+        width: 50%;
+    }  
+    #footer-left-navigation, .footer-right {
+        width: 25%;
+        max-width: 25%;
+    }
+    a.lumos-logo-footer {
+        width: 200px;
+    }
+    .footer-right a {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    section.footer {
+        padding: 50px 0 25px;
+    }
+    body .menu-item a img {
+        height: 85px;
+    }
+    .menu-top-navigation a {
+        font-size: 16px;
+    }
+    .menu-top-navigation a {
+        margin-right: 50px;
+        margin-bottom: 10px;
+    }
+    .menu-top-navigation a::after {
+        right: -25px;
+    }
+    .menu-top-navigation .menu-top-navigation-footer a {
+        margin-right: 16px;
+        margin-top: 7px;
+        margin-bottom: 0;
+    }
+    .menu-top-navigation .menu-top-navigation-footer a.menu-logo {
+        width: 150px;
+    }
+    section.footer-bottom p {
+        margin-right: 0px;
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .footer-bottom-social {
+        float: right;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+    #footer-bottom-navigation {
+        float: left;
+        width: 100%;
+        text-align: center;
+    }
+    #footer-bottom-navigation li {
+        float: none;
+        display: inline-block;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .blog-single-left {
+        width: 60%;
+    }
+    .blog-single-right {
+        width: 36%;
+    }
+    #breadcrumbs {
+        font-size: 20px;
+        padding: 25px 0;
+    }
+    .post .title {
+        font-size: 32px;
+    }
+}
+
+@media (max-width:768px) {
+    .menu-top-navigation li.product-title > a {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .menu-top-navigation li ul li {
+        margin-bottom: 30px;
+        width: 20%;
+    }
+    .menu-top-navigation a {
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+    .menu-top-navigation a::after {
+        right: -20px;
+    }
+    .menu-top-navigation li.product-title {
+        margin-bottom: 30px;
+    }
+    .menu-top-navigation .menu-top-navigation-footer {
+        text-align: center;
+    }
+    .menu-top-navigation .menu-top-navigation-footer a.menu-logo {
+        clear: left;
+        float: none;
+        margin-left: 0;
+        margin-top: 20px;
+        width: 110px;
+    }
+    .menu-top-navigation .menu-top-navigation-footer a.menu-logo {
+        display: none;
+    }
+    .menu-top-navigation .menu-top-navigation-footer a {
+        margin: 0 10px;
+    }
+    .menu-top-navigation .menu-top-navigation-footer a svg {
+        margin-right: 0;
+        width: 22px;
+    }
+    .blog-single-left {
+        margin-top: 20px;
+        width: 100%;
+    }
+    .blog-single-right {
+        width: 100%;
+    }
+}
+
+@media (max-width:640px) {
+    #footer-left-navigation, .footer-right {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+    .footer-center {
+        width: 100%;
+        text-align: center;
+    }
+    a.lumos-logo-footer {
+        width: 200px;
+        max-width: 100%;
+        margin-bottom: 40px;
+        margin-top: 20px;
+    }
+    .footer-right a {
+        padding-left: 0;
+        padding-top: 30px;
+        background-position: top center;
+        margin-bottom: 20px;
+    }
+    .blog-listing-body .blog-item {
+        width: 100%;
+        margin-right: 0 !important;
+        margin-bottom: 35px;
+    }
+    .blog-listing-body .blog-list-image {
+        margin-bottom: 15px;
+    }
+    #footer-bottom-navigation li {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #footer-bottom-navigation li::after {
+        height: 13px;
+        top: 6px;
+        right: -10px;
+    }
+    .menu-top-navigation li ul li {
+        margin-bottom: 20px;
+        width: 33%;
+    }
+    .menu-top-navigation .menu-top-navigation-footer {
+        display: none;
+    }
+    .menu-top-navigation a {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .menu-top-navigation a::after {
+        right: -10px;
+        top: 6px;
+        height: 13px;
+    }
+    .menu-top-navigation a {
+        font-size: 15px;
+    }
+    body .menu-item a img {
+        width: 72%;
+        padding-bottom: 10px !important;
+        height: 80px;
+    }
+    #header a.lumos-logo {
+        width: 140px;
+    }
+    .menu-tab {
+        width: 30px;
+        margin-top: 15px;
+    }
+    .menu-tab div {
+        margin-bottom: 6px;
+        height: 2px;
+    }
+    .menu-tab .two, .menu-tab .three {
+        width: 18px;
+    }
+    a.header-button {
+        font-size: 14px;
+        margin-right: 10px;
+        padding: 5px 20px;
+        margin-top: 4px;
+    }
+    #header a.lumos-logo img {
+        height: 45px;
+    }
+    .hero-overlay h1.title {
+        font-size: 40px;
+        line-height: 48px;
+    }
+    .hero-overlay a {
+        font-size: 15px;
+        font-weight: bold;
+        padding: 8px 40px;
+    }
+    section.hero {
+        padding-top: 180px;
+        padding-bottom: 50px;
+    }
+    h2.blog-listing-title {
+        width: 100%;
+        text-align: center;
+    }
+    ul.blog-category-list {
+        width: 100%;
+        text-align: center;
+    }
+    ul.blog-category-list li {
+        float: none;
+        display: inline-block;
+    }
+    #breadcrumbs {
+        font-size: 18px;
+        padding: 20px 0;
+    }
+    .post .title {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    .post .title span {
+        font-size: 16px;
+    }
+
+    .blog-listing-body .blog-lising-content h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .blog-listing-body .blog-lising-content p {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width:355px) {
+    a.header-button {
+        display: none;
+    }
+    
+}
+
+
+@media (max-width:460px) {
+    
+    
+}
+
+
+@media (max-width:360px) {
+}
+@media (max-width:340px) {
+    body{
+        min-width:320px;
+    }
+}
+ 
