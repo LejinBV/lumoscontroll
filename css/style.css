@@ -2716,6 +2716,10 @@ section.footer {
   padding-bottom: 50px;
 }
 
+.go-wireless-video video {
+  width: 100%;
+}
+
 .floating-nav {
   background: #fff;
   width: 100%;
